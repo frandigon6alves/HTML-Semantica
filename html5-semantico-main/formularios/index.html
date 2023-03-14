@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon/" />
+  </head>
+  <body>
+    <header>
+      <h1>Formularios</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="../enlaces/index.html">Enlaces</a></li>
+        <li><a href="../listas/index.html">Listas</a></li>
+        <li><a href="index.html">Formularios</a></li>
+        <li><a href="../imagenes/index.html">Imágenes</a></li>
+        <li>
+          Multimedia
+          <ul>
+            <li><a href="../multimedia/video/index.html">Vídeo</a></li>
+            <li><a href="../multimedia/audio/index.html">Audio</a></li>
+          </ul>
+        </li>
+        <li><a href="../semantica/index.html">HTML5 semántico</a></li>
+        <li><a href="../tablas/index.html">Tablas</a></li>
+      </ul>
+    </nav>
+    <main>
+      <form action="">
+        <p></p>
+        <fieldset>
+          <legend>Campos a validar sin expresión regular</legend>
+
+          <p>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="carol@gmail.com"
+            />
+          </p>
+          <p>
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" id="fecha" name="fecha" />
+          </p>
+          <p>
+            <label for="animales">Animales de compañia en casa</label>
+            <input type="number" id="animales" name="animales" min="0" />
+          </p>
+
+          <p>
+            <label for="sobreti"
+              >Hablános un poco sobre ti, pero no mucho! 100 carácteres
+              máximo</label
+            >
+            <textarea id="sobreti" name="sobreti" maxlength="100"></textarea>
+          </p>
+
+          <p><input type="submit" value="Validar todos los campos" /></p>
+        </fieldset>
+      </form>
+      <form>
+        <fieldset>
+          <legend>Campos a validar con expresión regular</legend>
+
+          <label for="dni">Un DNI de ocho números y una letra</label>
+          <input
+            type="text"
+            id="dni"
+            pattern="[0-9]{8}[A-Z]"
+            placeholder="40534345P"
+          />
+          <p>
+            <label for="nie">Un NIE</label>
+            <input
+              type="text"
+              id="nie"
+              pattern="[XYZ][0-9]{7}[A-Z]"
+              placeholder="X1234567E"
+            />
+          </p>
+          <p>
+            <label for="hora-formato-24">Hora formato 24h</label>
+            <input
+              type="text"
+              id="hora-formato-24"
+              pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]"
+              placeholder="13:13:13"
+            />
+          </p>
+          <p>
+            <label for="telefono">Telefono</label>
+            <input
+              type="text"
+              id="telefono"
+              pattern="\+34[\d]{7}|\+34\s[\d]{3}\s[\d]{2}\s[\d]{2}"
+              placeholder="+346666666 | +34 666 66 66"
+            />
+          </p>
+          <p>
+            <label for="fecha">Fecha</label>
+            <input
+              type="text"
+              id="fecha"
+              pattern="(0[1-9]|[12][0-9]|3[01])[- \/.](0[1-9]|1[012])[- \/.](19|20)\d\d"
+              placeholder="02-02-2022"
+              title="Pon una fecha correcta DIA-MES-AÑO"
+            />
+          </p>
+          <br />
+          <input type="submit" value="Validar todos los campos" />
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <p>© FOAP 2023 😀</p>
+    </footer>
+  </body>
+</html>
